@@ -116,6 +116,7 @@ export default {
       this.sort = '';
       this.name = '';
       this.dateOfBirth = null;
+      this.singleSector = '';
 
       
     }
