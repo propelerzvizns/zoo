@@ -6,6 +6,7 @@
           <th>sort</th>
           <th>name</th>
           <th>date of birth</th>
+          <th></th>
         </tr>
 
       </thead>
@@ -15,6 +16,7 @@
           <td> {{ animal.name}}</td>
           <td v-if="animal.dateOfBirth">{{ animal.dateOfBirth.toLocaleString()}}</td>
           <td v-else>nepoznato</td>
+          <td><button @click="remove(animal.sort, 1)">remove</button></td>
         </tr>
       </tbody>
     </table>
@@ -63,6 +65,12 @@ export default {
     
       
       ]
+    }
+  },
+  methods: {
+    remove(param, a){
+      this.animals.splice(param, a);
+      
     }
   }
   
