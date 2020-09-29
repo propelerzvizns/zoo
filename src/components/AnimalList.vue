@@ -10,10 +10,10 @@
 
       </thead>
       <tbody>
-        <tr v-for="animal in animals" :key="animal">
+        <tr v-for="(animal, index) in animals" :key="index">
           <td> {{ animal.sort}}</td>
           <td> {{ animal.name}}</td>
-          <td>{{ animal.dateOfBirth}}</td>
+          <td>{{ animal.dateOfBirth..toLocaleString()}}</td>
         </tr>
       </tbody>
     </table>
@@ -31,28 +31,28 @@ export default {
       
           {
             sort: 'pas',
-            name: 'kerina',
-            dateOfBirth: new Date(2020, 7, 15).toLocaleString()
+            name: 'panco',
+            dateOfBirth: new Date(2020, 7, 15)
           },
           {
             sort: 'macka',
             name: 'mica',
-            dateOfBirth: new Date(2019, 8, 19).toLocaleString()
+            dateOfBirth: new Date(2019, 8, 19)
           },
           {
             sort: 'krava',
             name: 'kravica',
-            dateOfBirth: new Date(2018, 1, 11).toLocaleString()
+            dateOfBirth: new Date(2018, 1, 11)
           },
           {
             sort: 'svinja',
-            name: 'dlakava',
-            dateOfBirth: new Date(2017, 2, 5).toLocaleString()
+            name: 'svinjcek',
+            dateOfBirth: new Date(2017, 2, 5)
           },
           {
             sort: 'majmun',
             name: 'majmunko',
-            dateOfBirth: new Date(2016, 4, 23).toLocaleString()
+            dateOfBirth: new Date(2016, 4, 23)
           }
     
       
@@ -60,10 +60,7 @@ export default {
     }
   }
   
-    // cat
-    // cow
-    // pig
-    // monkey
+
 
 
 }
@@ -89,7 +86,9 @@ a {
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 400px;
+  width:30%;
+  margin-left:35%;
+  margin-right:35%; 
 }
 
 td, th {
