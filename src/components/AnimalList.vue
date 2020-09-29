@@ -1,13 +1,13 @@
 <template>
   <div class="hello">
     <form action="" method="post" @submit.prevent="addAnimal">
-      <input v-model="sort" type="text">
+      <input type="text" v-model="sort" type="text">
      
-      <!-- <p>Message is: {{ message }}</p> -->
-      <input  v-model="name" type="text">
-      <!-- <p>Message is: {{ message }}</p> -->
-      <input  v-model="dateOfBirth" type="text">
-      <!-- <p>Message is: {{ message }}</p> -->
+
+      <input type="text" v-model="name" type="text">
+
+      <input type="date" v-model="dateOfBirth" type="text">
+
       <button>add animal</button>
     </form>
     <table>
