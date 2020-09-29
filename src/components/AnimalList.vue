@@ -43,7 +43,7 @@ export default {
     return {
       name: '',
       sort: '',
-      dateOfBirth: '',
+      dateOfBirth: null,
       animals: [
       
           {
