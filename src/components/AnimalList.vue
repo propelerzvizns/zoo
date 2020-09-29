@@ -102,6 +102,9 @@ export default {
       }
       this.animals.push(newAnimal);
       console.log(this.animals);
+      this.sort = '';
+      this.name = '';
+      this.dateOfBirth = null;
       
     }
   }
