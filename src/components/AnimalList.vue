@@ -1,5 +1,15 @@
 <template>
   <div class="hello">
+    <form action="" method="post" @submit.prevent="addAnimal">
+      <input v-model="sort" type="text">
+     
+      <!-- <p>Message is: {{ message }}</p> -->
+      <input  v-model="name" type="text">
+      <!-- <p>Message is: {{ message }}</p> -->
+      <input  v-model="dateOfBirth" type="text">
+      <!-- <p>Message is: {{ message }}</p> -->
+      <button>add animal</button>
+    </form>
     <table>
       <thead>
         <tr>
@@ -17,7 +27,7 @@
           <td v-if="animal.dateOfBirth">{{ animal.dateOfBirth.toLocaleString()}}</td>
           <td v-else>nepoznato</td>
           <td><button @click="remove(index)">remove</button></td>
-          <td><button @click="moveToTop(index)">move to top</button></td>
+          <td><button @click="moveToTop(index, animal)">move to top</button></td>
         </tr>
       </tbody>
     </table>
@@ -31,6 +41,9 @@ export default {
   name: 'AnimalList',
   data() {
     return {
+      name: '',
+      sort: '',
+      dateOfBirth: '',
       animals: [
       
           {
@@ -78,6 +91,17 @@ export default {
       this.animals.unshift(this.animals[param])
       this.remove(param + 1);
     
+      
+    },
+
+    addAnimal(){
+      var newAnimal = {
+        name: this.name,
+        sort: this.sort,
+        dateOfBirth: this.dateOfBirth
+      }
+      this.animals.push(newAnimal);
+      console.log(this.animals);
       
     }
   }
