@@ -1,12 +1,12 @@
 <template>
   <div class="hello">
     <form action="" method="post" @submit.prevent="addAnimal">
-      <input type="text" v-model="sort" type="text">
+      <input type="text" v-model="sort" >
      
 
-      <input type="text" v-model="name" type="text">
+      <input type="text" v-model="name" >
 
-      <input type="date" v-model="dateOfBirth" type="text">
+      <input type="date" v-model="dateOfBirth">
 
       <button>add animal</button>
     </form>
